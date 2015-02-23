@@ -1,0 +1,51 @@
+﻿@model projectEAD.Models.Player
+@{
+    ViewBag.Title = "Update_Player";
+}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title> Task 1 </title>
+    <script src="~/Scripts/jquery-1.11.2.min.js"></script>
+    <link href="bootstrap.css" rel="Stylesheet" />
+    <script src="bootstrap.js"></script>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    
+</head>
+<h2>Update_Player</h2>
+<body>
+
+    <div class="row" >
+     <div class="col-md-7 col-md-offset-2" style="background-color:whitesmoke" >
+
+<nav class="navbar navbar-inverse" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#" >Cricket You Required</a>
+        </div>
+        <div >
+             <ul class="nav navbar-nav">
+                <li ><a href="#">Home</a></li>
+                <li ><a href="/Schedule/schedule/">Schedule</a></li>
+                <li ><a href="/Series/series/">News</a></li>
+                <li ><a href="/News/View_News/">News</a></li>
+                <li ><a href="/Photos/photos/">News</a></li>
+            </ul>
+        </div>
+    </nav>
+<form action="/Admin/updateConfirm/@Model.PID" method="post">
+
+    Name <input type="text" value="@Model.Name" name="t1" />
+    Age <input type="text" value="@Model.Age" name="t2" />
+    ODI_Matches <input type="text" value="@Model.ODI_Matches" name="t3" />
+    Test_Matches <input type="text" value="@Model.Test_Matches" name="t4" />
+    T20_Matches <input type="text" value="@Model.T20_Matches" name="t5" />
+    ODI_Average <input type="text" value="@Model.ODI_Average" name="t6" />
+    Test_Average <input type="text" value="@Model.Test_Average" name="t7" />
+    T20_Average <input type="text" value="@Model.T20_Average" name="t8" />
+
+    <input type="submit" value="Add Player" />
+
+
+</form>
+</body>

@@ -1,0 +1,52 @@
+﻿@model IEnumerable<projectEAD.Models.Team>
+
+@{
+    ViewBag.Title = "displayTeam";
+}
+
+<h2>displayTeam</h2>
+
+
+<p>
+    @Html.ActionLink("Create New", "AddTeam")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Team_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ODI_Rank)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Test_Rank)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.T20_Rank)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Team_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ODI_Rank)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Test_Rank)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.T20_Rank)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Team_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Team_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Team_ID })
+        </td>
+    </tr>
+}
+
+</table>

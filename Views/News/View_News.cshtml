@@ -1,0 +1,59 @@
+﻿@model List<projectEAD.Models.Team>
+
+@{
+    ViewBag.Title = "View_News";
+}
+
+<h2>View_News</h2>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="bootstrap.css" rel="Stylesheet" />
+    <script src="bootstrap.js"></script>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+</head>
+<body bgcolor="#66ff99">
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#" >Cricket You Required</a>
+        </div>
+        <div >
+             <ul class="nav navbar-nav">
+                <li ><a href="/Home/Index/">Home</a></li>
+                <li ><a href="/Schedule/schedule/">Schedule</a></li>
+                <li ><a href="/Series/series/">Series</a></li>
+                <li class="active"><a href="/News/View_News/">News</a></li>
+                <li ><a href="/Photos/photos/">Photos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<div class="panel panel-default ">
+    <div class="panel-heading">
+    <div class="jumbotron">
+<h1  ><em><strong>Cricket News Index</strong></em></h1>
+</div>
+</div>
+<div class="panel-body">
+<div class="list-group">
+<a href="/News/warner_news/" class="list-group-item">
+<h3 class="list-group-item-heading">Warner strikes 'arrogant' note for World Cup</h3>
+<p class="list-group-item-text">David Warner is set to play his first World Cup and believes he can turnaround his middling ODI form during Australia's campaign</p>
+</a>
+<a href="#" class="list-group-item">
+<h3 class="list-group-item-heading">South Africa asked to bat, make three changes</h3>
+<p class="list-group-item-text">At an altitude where the ball will fly even faster than usual off the bats of their big guns, West Indies wanted to know exactly what they would be chasing at the Wanderers with a series victory in sight.</p>
+</a>
+<a href="/News/Ranking/" class="list-group-item">
+<h3 class="list-group-item-heading">Ranking </h3>
+<p class="list-group-item-text">ICC announance the final ranking of Teams before the world cup 
+</p>
+</a>
+   
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+﻿@model projectEAD.Models.Result
+
+@{
+    ViewBag.Title = "Add_Result";
+}
+
+<h2>Add_Result</h2>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="bootstrap.css" rel="Stylesheet" />
+    <script src="bootstrap.js"></script>
+    <link href="~/Scripts/bootstrap.css" rel="stylesheet" />
+</head>
+    <body >
+<div class="row" >
+     <div class="col-md-7 col-md-offset-2" style="background-color:whitesmoke">
+
+<nav class="navbar navbar-inverse" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#" >Cricket You Required</a>
+        </div>
+        <div >
+             <ul class="nav navbar-nav">
+                <li ><a href="/Home/Index/">Home</a></li>
+                <li ><a href="/Schedule/schedule/">Schedule</a></li>
+                <li ><a href="/Series/series/">Series</a></li>
+                <li ><a href="/News/View_News/">News</a></li>
+                <li ><a href="/Photos/photos/">Photos</a></li>
+            </ul>
+        </div>
+    </nav>
+<form action="/MatchScore/addResult/" method="post">
+
+    <fieldset>
+     <legend>Add New Match</legend>
+    <div><label>Overs:</label>
+      @Html.TextBoxFor(model => model.Overs); <br /><br />
+      </div>
+    <div>
+       <label>Score:</label>
+     @Html.TextBoxFor(model => model.score);<br /><br />
+        </div>
+        <div>
+       <label>wickets:</label>
+    @Html.TextBoxFor(model => model.wickets);<br /><br /></div>
+        <div>
+       <label>Fours:</label>
+     @Html.TextBoxFor(model => model.Fours);<br /><br /></div>
+        <div>
+       <label>Six:</label>
+     @Html.TextBoxFor(model => model.Six);<br /><br /></div>
+        <div>
+       <label>Balls:</label>
+     @Html.TextBoxFor(model => model.Balls);<br /><br /></div>
+        
+
+    <input type="submit" value="Add Result" />
+
+
+</fieldset>
+    </form>
+         
+         </div>
+    </div>
+        </body>
+    </html>

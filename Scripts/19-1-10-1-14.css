@@ -1,0 +1,127 @@
+#main {
+	width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #333333;
+	background-image: url(../images/footer.jpg);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+}
+#main #footer {
+	clear: both;
+	width: 1000px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #00CCCC;
+	text-align: center;
+	line-height: 18px;
+	border-top-width: 2px;
+	border-top-style: solid;
+	border-top-color: #00CCCC;
+	margin-bottom: 30px;
+}
+.col1 a {
+	color: #00CCCC;
+	text-decoration: none;
+}
+#main #footer a {
+	color: #00CCCC;
+	text-decoration: none;
+}
+#main #footer a:hover {
+	color: #FFFFFF;
+}
+
+
+#main #header {
+	float: left;
+	width: 950px;
+	font-family: "Trebuchet MS", Verdana, Tahoma;
+	font-size: 30px;
+	font-weight: bold;
+	color: #00CCCC;
+	padding-left: 50px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+#main #header a {
+	color: #00CCCC;
+	text-decoration: none;
+}
+
+#banner #menupanel {
+	float: left;
+	height: 40px;
+	width: 1000px;
+	margin-top: 246px;
+}
+#menupanel ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-image: none;
+	list-style-type: none;
+}
+#menupanel li {
+	display: inline;
+}
+#menupanel li a {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-transform: uppercase;
+	text-decoration: none;
+	float: left;
+	padding-right: 27px;
+	padding-left: 27px;
+	color: #00CCCC;
+	display: block;
+	font-weight: bold;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+#menupanel li a:hover {
+	background-image: url(../images/hover2.jpg);
+	background-repeat: no-repeat;
+	background-position: 5px center;
+	color: #FFFFFF;
+}
+#main #content {
+	float: left;
+	width: 1000px;
+	background-color: #333333;
+}
+#menupanel li a.borders {
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #67B1BC;
+}
+
+#main #banner {
+	float: left;
+	height: 300px;
+	width: 1000px;
+	background-image: url(../images/banner.jpg);
+}
+#content .sider {
+	width: 260px;
+	float: right;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+#content .col1 {
+	float: left;
+	width: 630px;
+	font-family: Tahoma, "Trebuchet MS", Verdana, Arial;
+	font-size: 12px;
+	color: #FFFFFF;
+	padding-right: 30px;
+	padding-left: 80px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.col1 a:hover {
+	color: #009999;
+}

@@ -1,0 +1,102 @@
+﻿@model projectEAD.Models.Team
+@{
+    ViewBag.Title = "AddTeam";
+}
+
+<h2>AddTeam</h2>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+    <link href="bootstrap.css" rel="Stylesheet" />
+    <script src="bootstrap.js"></script>
+    <link href="~/Scripts/bootstrap.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery-2.1.3.js"></script>
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/jquery-1.11.2.min.js"></script>
+
+</head>
+    <body>
+        <div class="row" >
+     <div class="col-md-7 col-md-offset-2" style="background-color:whitesmoke">
+
+<nav class="navbar navbar-inverse" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#" >Cricket You Required</a>
+        </div>
+        <div >
+             <ul class="nav navbar-nav">
+                <li ><a href="/Home/Index/">Home</a></li>
+                <li ><a href="/Schedule/schedule/">Schedule</a></li>
+                <li ><a href="/Series/series/">Series</a></li>
+                <li ><a href="/News/View_News/">News</a></li>
+                <li ><a href="/Photos/photos/">Photos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+        @using (Html.BeginForm()) {
+     @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Team_Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Team_Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ODI_Rank)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ODI_Rank)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Test_Rank)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Test_Rank)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.T20_Rank)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.T20_Rank)
+        </div>
+
+        <p>
+            <input type="submit" value="Add" />
+        </p>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Menu")
+</div>
+        <script>
+            $("form").validate({
+                rules: {
+                    Team_Name: "required",
+                    ODI_Rank: "required",
+                    Test_Rank: "required",
+                    T20_Rank: "required"
+                },
+                messages: {
+                    Team_Name: "required",
+                    ODI_Rank: "required",
+                    Test_Rank: "required",
+                    T20_Rank: "required"
+                }
+
+            });
+</script>
+         </div>
+            </div>
+        
+    </body>
+</html>

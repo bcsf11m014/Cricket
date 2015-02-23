@@ -1,0 +1,65 @@
+﻿@model projectEAD.Models.Match
+
+@{
+    ViewBag.Title = "Add_Match";
+}
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="bootstrap.css" rel="Stylesheet" />
+    <script src="bootstrap.js"></script>
+    <link href="~/Scripts/bootstrap.css" rel="stylesheet" />
+</head>
+    <body >
+<div class="row" >
+     <div class="col-md-7 col-md-offset-2" style="background-color:whitesmoke">
+
+<nav class="navbar navbar-inverse" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#" >Cricket You Required</a>
+        </div>
+        <div >
+             <ul class="nav navbar-nav">
+                <li ><a href="/Home/Index/">Home</a></li>
+                <li ><a href="/Schedule/schedule/">Schedule</a></li>
+                <li ><a href="/Series/series/">Series</a></li>
+                <li ><a href="/News/View_News/">News</a></li>
+                <li ><a href="/Photos/photos/">Photos</a></li>
+            </ul>
+        </div>
+    </nav>
+<form action="/MatchScore/addMatch/" method="post">
+
+    <fieldset>
+     <legend>Add New Match</legend>
+    <div><label>Date:</label>
+      @Html.TextBoxFor(model => model.date); <br /><br />
+      </div>
+    <div>
+       <label>Type:</label>
+     @Html.TextBoxFor(model => model.Type);<br /><br />
+        </div>
+        <div>
+       <label>Ground:</label>
+    @Html.TextBoxFor(model => model.Ground);<br /><br /></div>
+        <div>
+       <label>Time:</label>
+     @Html.TextBoxFor(model => model.Time);<br /><br /></div>
+        <div>
+       <label>City:</label>
+     @Html.TextBoxFor(model => model.city_);<br /><br /></div>
+    <br /><br />
+
+    <input type="submit" value="Add Match" />
+
+
+</fieldset>
+    </form>
+         
+         </div>
+    </div>
+        </body>
+    </html>

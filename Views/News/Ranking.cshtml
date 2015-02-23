@@ -1,0 +1,74 @@
+﻿@model List<projectEAD.Models.Team>
+@{
+    ViewBag.Title = "Ranking";
+}
+
+<h2>Ranking</h2>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="bootstrap.css" rel="Stylesheet" />
+    <script src="bootstrap.js"></script>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+</head>
+<body style="background-color:whitesmoke">
+<div class="row">
+     <div class="col-md-7 col-md-offset-2" >
+
+<nav class="navbar navbar-inverse" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#" >Cricket You Required</a>
+        </div>
+        <div >
+             <ul class="nav navbar-nav">
+                <li ><a href="#">Home</a></li>
+                <li ><a href="/Schedule/schedule/">Schedule</a></li>
+                <li ><a href="/Series/series/">News</a></li>
+                <li ><a href="/News/View_News/">News</a></li>
+                <li ><a href="/Photos/photos/">News</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<h2>Players List</h2>
+
+<table>
+    <tr>
+        <th>Name</th>
+
+        <th>ODI</th>
+
+        <th>Test</th>
+
+        <th>T20</th>
+     </tr>
+    
+    @foreach (var s in Model)
+    {
+        <tr>
+            <td>@s.Team_Name</td>
+            
+            <td>@s.ODI_Rank</td>
+            <td>@s.Test_Rank</td>
+
+            <td>@s.T20_Rank</td>
+
+            <td>
+                <br />
+
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+
+   </div>
+    </div>
+    </body>
+    </html>

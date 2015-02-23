@@ -1,0 +1,59 @@
+﻿@model projectEAD.Models.Team
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Student</legend>
+
+        @Html.HiddenFor(model => model.Team_ID)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Team_Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Team_Name)
+            @Html.ValidationMessageFor(model => model.Team_Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ODI_Rank)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ODI_Rank)
+            @Html.ValidationMessageFor(model => model.ODI_Rank)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Test_Rank)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Test_Rank)
+            @Html.ValidationMessageFor(model => model.Test_Rank)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.T20_Rank)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.T20_Rank)
+            @Html.ValidationMessageFor(model => model.T20_Rank)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "displayTeam")
+</div>
+

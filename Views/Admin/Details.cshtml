@@ -1,0 +1,43 @@
+﻿@model projectEAD.Models.Team
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Student</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Team_Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Team_Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ODI_Rank)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ODI_Rank)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Test_Rank)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Test_Rank)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.T20_Rank)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.T20_Rank)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Team_ID }) |
+    @Html.ActionLink("Back to List", "displayTeam")
+</p>

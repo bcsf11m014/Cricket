@@ -1,0 +1,56 @@
+﻿@model projectEAD.Models.Admin
+
+@{
+    ViewBag.Title = "login";
+}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="bootstrap.css" rel="Stylesheet" />
+    <script src="bootstrap.js"></script>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+</head>
+<body >
+<div class="row" >
+     <div class="col-md-7 col-md-offset-2" style="background-color:whitesmoke" >
+
+<nav class="navbar navbar-inverse" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#" >Cricket You Required</a>
+        </div>
+        <div >
+             <ul class="nav navbar-nav">
+                <li ><a href="#">Home</a></li>
+                <li ><a href="/Schedule/schedule/">Schedule</a></li>
+                <li ><a href="/Series/series/">News</a></li>
+                <li ><a href="/News/View_News/">News</a></li>
+                <li ><a href="/Photos/photos/">News</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<h2>login</h2>
+
+<form action="/Admin/check_Login/" method="post">
+    <br /><br />
+    <div class="input-group">
+  <span class="input-group-addon" id="sizing-addon1"></span>
+  <input type="text" name="User_Name" class="form-control" placeholder="Username" aria-describedby="sizing-addon1"/>
+</div>
+    <br /><br />
+    <div class="input-group">
+  <span class="input-group-addon" id="sizing-addon2"></span>
+  <input type="text" name="Password" class="form-control" placeholder="password" aria-describedby="sizing-addon2"/>
+</div>
+    <br /><br />
+    <input type="submit" value="Login" />
+
+    </form>
+
+         </div>
+    </div>
+    </body>
+    </html>
